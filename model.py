@@ -1,0 +1,5 @@
+data = pd.read_csv('res_dpre.csv')
+model = KMeans(n_clusters=3)
+model.fit(data)
+n = pd.Series(model.labels_).value_counts()
+n.to_csv('/home/doc-bd-a1/k.txt')
